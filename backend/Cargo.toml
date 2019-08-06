@@ -1,0 +1,20 @@
+[package]
+name = "backend"
+version = "0.1.0"
+authors = ["Addie Morrison <developer@0xADD1E.me>"]
+edition = "2018"
+
+[dependencies]
+failure = "0.1"
+env_logger = "0.6"
+futures = "0.1"
+
+serde = "1.0"
+serde_json = "1.0"
+serde_derive = "1.0"
+
+actix-web = "1.0"
+actix-cors = "0.1.0"
+actix-web-prom = "0.1.2"
+
+juniper = "0.9.2"
