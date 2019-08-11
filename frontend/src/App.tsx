@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Grommet } from "grommet";
+import { ThemeProvider } from "@material-ui/styles";
 import "./App.css";
 import Btn from "./Btn";
 import Logo from "./Logo";
@@ -9,22 +9,15 @@ import imageA from "./img.webp";
 import CssUnits from "./CssUnits";
 
 const theme = {
-    global: {
-        font: {
-            family: "Roboto",
-            size: "14px",
-            height: "20px"
-        }
-    }
+   background: "linear-gradient(45deg #FE6B8B 30%, FF8E53 90%"
 };
-
 
 class App extends React.Component {
     
     render() {
         return (
-            <Grommet theme={theme}>
-                <header className= "header">
+            <ThemeProvider>
+                <header>
                     <Logo size={100} units={CssUnits.Percent}/>
                     <Btn text="Sign up" excite />
                     <Btn text="Log-in" />
@@ -44,7 +37,7 @@ class App extends React.Component {
                         <Logo size={25} units={CssUnits.Percent}/>
                     </div>
                 </footer>
-            </Grommet>
+            </ThemeProvider>
         );
     }
 }
